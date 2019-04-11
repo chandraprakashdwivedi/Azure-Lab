@@ -1,0 +1,6 @@
+- name: Create Azure Deploy
+  azure_rm_deployment:
+    state: present
+    resource_group_name: dev-ops-cle
+    template_link: roles/storage/template/storage.yml
+    parameters_link: 
