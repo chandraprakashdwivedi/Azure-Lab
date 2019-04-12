@@ -1,13 +1,15 @@
 ## Setting up credential in jenkins
 
-#Inside JENKINS_HOME use a profile stored in ~/.azure/credentials.
+Inside JENKINS_HOME use a profile stored in ~/.azure/credentials.
 
 [default]
-subscription_id=
-client_id=
-secret=
-tenant=
-cert_validation_mode=validate
+subscription_id=  \n
+client_id=   \n
+secret=  \n
+tenant=   \n
+cert_validation_mode=validate  \n
+
+\n\n
 
 See anisble documentation to set up this authorization
 https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html
