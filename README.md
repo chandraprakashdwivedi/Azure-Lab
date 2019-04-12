@@ -3,13 +3,13 @@
 Inside JENKINS_HOME use a profile stored in ~/.azure/credentials.
 
 [default] \
-subscription_id= <br/>
-client_id=   \n
-secret=  \n
-tenant=   \n
-cert_validation_mode=validate  \n
+subscription_id= \
+client_id=   \
+secret=  \
+tenant=   \
+cert_validation_mode=validate  \
 
-\n\n
+\\
 
 See anisble documentation to set up this authorization
 https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html
