@@ -27,7 +27,7 @@ pipeline {
                 echo 'Deployment using AZURE ARM'
                 sh ' ansible-playbook site.yml '  //to create ecs web hosting
               //sh ' ansible-playbook site-down.yml ' //to delete all ecs web hosting
-               sh 'ansible-playbook network.yml"
+               sh 'ansible-playbook network.yml'
             }
         }
         /*stage('s3 Bucket creation using Terraform') {
