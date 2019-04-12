@@ -9,7 +9,7 @@ secret=  \
 tenant=   \
 cert_validation_mode=validate   
 
-\
+
 
 See anisble documentation to set up this authorization
 https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html
