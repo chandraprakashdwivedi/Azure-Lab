@@ -1,4 +1,4 @@
-variables:
+network_variables:
         myresources: "myresources"
         location: "Central India"
         imagePublisher: "Canonical"
