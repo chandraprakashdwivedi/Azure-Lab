@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars_files:
+     - group_vars/default/main.yml
+     - group_vars/network/main.yml
+  
+  roles:
+    - { role: virtual_network, variables: "{{ network_variables }}" }
