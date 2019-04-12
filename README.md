@@ -3,7 +3,7 @@
 Inside JENKINS_HOME use a profile stored in ~/.azure/credentials.
 
 [default]
-subscription_id=  \n
+subscription_id= <br/>
 client_id=   \n
 secret=  \n
 tenant=   \n
