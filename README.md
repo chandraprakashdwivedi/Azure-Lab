@@ -19,3 +19,8 @@ https://www.youtube.com/watch?v=WygwzN9FfMQ
 
 Note: Azure following the concept of APP's and Resourcegroup to create any number of resources and services in the cloud.
 
+
+
+#Azure Automation Ansible Module same as Cloudformation
+
+https://docs.ansible.com/ansible/latest/modules/azure_rm_deployment_module.html#azure-rm-deployment-module
