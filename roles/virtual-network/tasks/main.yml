@@ -8,7 +8,7 @@
    template:
       $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
       contentVersion: "1.0.0.0"
-    resources:
+   resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
           name: "[variables('virtualNetworkName')]"
@@ -21,3 +21,4 @@
               - name: "[variables('subnetName')]"
                 properties:
                   addressPrefix: "[variables('subnetPrefix')]"
+   with_items: "{{ network_items }}"
