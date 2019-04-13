@@ -21,4 +21,3 @@
               - name: "[variables('subnetName')]"
                 properties:
                   addressPrefix: "[variables('subnetPrefix')]"
-   with_items: "{{ network_items }}"
