@@ -13,14 +13,14 @@
       resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
-          name: "[variables('virtualNetworkName')]"
-          location: "[variables('location')]"
+          name:  "MyVNET"
+          location: "Central India"
           properties:
             addressSpace:
               addressPrefixes:
-                - "[variables('addressPrefix')]"
+                - "192.0.2.0/24"
             subnets:
-              - name: "[variables('subnetName')]"
+              - name: "Subnet"
                 properties:
-                  addressPrefix: "[variables('subnetPrefix')]"
-  with_items: "{{ variables }}"
+                  addressPrefix: "10.0.0.0/24"
+
