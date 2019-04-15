@@ -1,5 +1,5 @@
 network_variables:
-      - myresources: "myresources"
+        myresources: "myresources"
         location: "Central India"
         imagePublisher: "Canonical"
         imageOffer: "UbuntuServer"
