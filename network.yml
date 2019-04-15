@@ -7,5 +7,5 @@
   
   roles:
     #- virtual-network
-    - { role: virtual-network, "{{ variables }}" }
+    - { role: virtual-network, variable: }
     #- { role: virtual-network, variables: "{{ network_variables }}" }
