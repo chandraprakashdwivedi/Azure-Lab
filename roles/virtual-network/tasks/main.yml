@@ -4,8 +4,8 @@
     resource_group_name: "{{ item.myresources }}"
     location: "{{ item.location }}"
     template:
-      $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
-      contentVersion: "1.0.0.0"
+     # $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
+     # contentVersion: "1.0.0.0"
       location: "{{ item.location }}"
       deployment-name: "mypx"
       resources:
