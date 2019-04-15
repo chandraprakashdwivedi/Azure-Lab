@@ -1,23 +1,26 @@
-- name: creating virtual network 
+- name: Create Azure Deploy
   azure_rm_deployment:
     state: present
     resource_group_name: "{{ resource_group }}"
     template:
       $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
       contentVersion: "1.0.0.0"
-
+      #parameters:
+       #  name:
+        #  type: "string"
+         # metadata:
+          #  description: "Unique 
       resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
-          name: "{{ item.virtualNetworkName }}"
-          location: "{{ item.location }}"
+          name: "[variables('virtualNetworkName')]"
+          location: "[variables('location')]"
           properties:
             addressSpace:
               addressPrefixes:
-                - "{{ item.addressPrefix }}"
+                - "[variables('addressPrefix')]"
             subnets:
-              - name: "{{ item.subnetName }}"
+              - name: "[variables('subnetName')]"
                 properties:
-                  addressPrefix: "{{ item.subnetPrefix }}"
+                  addressPrefix: "[variables('subnetPrefix')]"
   #with_items: "{{ variables }}"
-              
