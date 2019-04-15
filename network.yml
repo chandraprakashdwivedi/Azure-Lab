@@ -2,8 +2,9 @@
   connection: local
   gather_facts: false
   vars_files:
-     - group_vars/default/main.yml
-     - group_vars/network/main.yml
+  #   - group_vars/default/main.yml
+  #   - group_vars/network/main.yml
   
   roles:
-    - { role: virtual-network, variables: "{{ network_variables }}" }
+    - virtual-network
+    #- { role: virtual-network, variables: "{{ network_variables }}" }
