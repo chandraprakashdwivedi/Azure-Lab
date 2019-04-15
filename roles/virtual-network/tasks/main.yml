@@ -1,27 +1,25 @@
 - name: Create Azure Deploy
   azure_rm_deployment:
     state: present
-    resource_group_name: "myresources"
-    parameters:
-       location:
-          value: Central India
+    resource_group_name: "{{ myresources }}"
     template:
       $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
       contentVersion: "1.0.0.0"
-      location: "[variables('location')]"
+      location: "{{ location }}"
       deployment-name: "mypx"
       resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
-          name: "[variables('virtualNetworkName')]"
-          location: "[parameters('location')]"
+          name: "{{ virtualNetworkName }}"
+          location:  "{{ location }}"
           properties:
             addressSpace:
               addressPrefixes:
-                - "[variables('addressPrefix')]"
+                -  "{{ addressPrefix }}"
             subnets:
-              - name: "[variables('subnetName')]"
+              - name: "{{ subnetName }}"
                 properties:
-                  addressPrefix: "[variables('subnetPrefix')]"
+                  addressPrefix: "{{ subnetPrefix }}"
+ 
   
               
