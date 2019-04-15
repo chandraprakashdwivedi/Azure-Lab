@@ -6,5 +6,5 @@
      - group_vars/default/main.yml
   
   roles:
-    - virtual-network
-    #- { role: virtual-network, variables: "{{ network_variables }}" }
+    #- virtual-network
+    - { role: virtual-network, variables: "{{ network_variables }}" }
