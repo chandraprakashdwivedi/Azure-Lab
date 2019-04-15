@@ -1,16 +1,17 @@
 - name: Create Azure Deploy
   azure_rm_deployment:
     state: present
-    resource_group_name: "{{ resource_group }}"
+  #  resource_group_name: "{{ resource_group }}"
     template:
-      #$schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
-      #contentVersion: "1.0.0.0"
+      $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
+      contentVersion: "1.0.0.0"
       location: "[variables('location')]"
       deployment-name: "mypx"
       resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
           name: "[variables('virtualNetworkName')]"
+          location: "[variables('location')]"
           properties:
             addressSpace:
               addressPrefixes:
