@@ -1,6 +1,6 @@
 network_variables:
-        myresources: "{{ resource_group }}"
-        location: "{{ region }}"
+        myresources: "myresources"
+        location: "Central India"
         imagePublisher: "Canonical"
         imageOffer: "UbuntuServer"
         OSDiskName: "osdiskforlinuxsimple"
