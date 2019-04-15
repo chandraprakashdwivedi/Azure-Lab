@@ -7,7 +7,7 @@
       contentVersion: "1.0.0.0"
       location: "{{ location }}"
       deployment-name: "mypx"
-      resources:
+    resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
           name: "{{ virtualNetworkName }}"
