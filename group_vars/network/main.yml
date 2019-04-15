@@ -1,4 +1,4 @@
-variables:
+network_variables:
         myresources: "{{ resource_group }}"
         location: "{{ region }}"
         imagePublisher: "Canonical"
