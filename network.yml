@@ -2,8 +2,8 @@
   connection: local
   gather_facts: false
   vars_files:
-  #   - group_vars/default/main.yml
-  #   - group_vars/network/main.yml
+     - group_vars/network/main.yml
+     - group_vars/default/main.yml
   
   roles:
     - virtual-network
