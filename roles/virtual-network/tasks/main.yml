@@ -1,7 +1,7 @@
 - name: Create Azure Deploy
   azure_rm_deployment:
     state: present
-    resource_group_name: "myresources"
+    resource_group_name: "myresources2"
     parameters:
        location:
           value: Central India
