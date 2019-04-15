@@ -18,7 +18,7 @@
               addressPrefixes:
                 -  "{{ item.addressPrefix }}"
             subnets:
-              - name:"{{ item.subnetName }}"
+              - name: "{{ item.subnetName }}"
                 properties:
                   addressPrefix: "{{ item.subnetPrefix }}"
   with_items: "{{ variables }}"  
