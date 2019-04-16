@@ -3,10 +3,8 @@
     state: present
     resource_group_name: "{{ myresources }}"
     template:
-      #$schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
+      $schema: "{{ lookup('file', 'VirtualNetworkTemplate.json') }}"
       contentVersion: "1.0.0.0"
-     # location: "{{ location }}"
-      #deployment-name: "mypx"
       resources:
         - type: "Microsoft.Network/virtualNetworks"
           apiVersion: "2015-05-01-preview"
