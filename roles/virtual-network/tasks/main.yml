@@ -2,7 +2,6 @@
   azure_rm_deployment:
     state: present
     resource_group_name: "{{ myresources }}"
-        location: "Central India"
     parameters:
        siteLocation:
           value: Central India
