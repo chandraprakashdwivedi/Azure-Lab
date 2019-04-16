@@ -1,0 +1,6 @@
+- name: Ensure the VM is deployed to Azure
+  azure_rm_deployment:
+    state: present
+    resource_group_name: "{{ resource_group_name }}"
+    template: "{{ lookup('file', 'VirtualMachineTemplate.json') }}"
+    parameters: "{{ (lookup('file', 'Parameters.json') | from_json).parameters }}"
