@@ -9,18 +9,22 @@
       parameters:
         newStorageAccountName:
           type: "string"
+          value:
           metadata:
             description: "Unique DNS Name for the Storage Account where the Virtual Machine's disks will be placed."
         adminUsername:
           type: "string"
+          value:
           metadata:
             description: "User name for the Virtual Machine."
         adminPassword:
           type: "securestring"
+          value:
           metadata:
             description: "Password for the Virtual Machine."
         dnsNameForPublicIP:
           type: "string"
+          value:
           metadata:
             description: "Unique DNS Name for the Public IP used to access the Virtual Machine."
         ubuntuOSVersion:
