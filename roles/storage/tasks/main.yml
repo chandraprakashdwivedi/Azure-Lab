@@ -1,6 +1,18 @@
 - name: Create Azure Deploy
   azure_rm_deployment:
     state: present
-    resource_group_name: dev-ops-cle
-    template_link: roles/storage/template/storage.yml
-    parameters_link: 
+    resource_group_name: "{{ myresources }}"
+    location: West US
+    template:
+      $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
+      contentVersion: "1.0.0.0"
+      resources:
+        - type: "Microsoft.Storage/storageAccounts"
+          name: "{{ newStorageAccountName }}"
+          apiVersion: "2015-05-01-preview"
+          location: "{{ location }}"
+          properties:
+            accountType: "{{ storageAccountType }}"
+ 
+  
+              
