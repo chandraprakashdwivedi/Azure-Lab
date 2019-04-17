@@ -1,3 +1,4 @@
-resource_group: myresources
-region: Central India
-newStorageAccountName: india-storage170419
+resource_group: "myresources"
+region: "Central India"
+newStorageAccountName: "india-storage170419"
+storageAccountType: "Standard_LRS"
