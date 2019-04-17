@@ -47,12 +47,12 @@
         - name: "{{ networkSecurityGroupName }}"
           type: "Microsoft.Network/networkSecurityGroups"
           apiVersion: "2016-09-01"
-          location: "[parameters('location')]"
+          location: "{{ location }}"
           comments: "Network Security Group (NSG) for your Primary NIC"
           properties: 
             securityRules: 
               - name: "network-acl-inbound"
-                properties: {
+                properties: 
                   priority: "1000"
                   sourceAddressPrefix: "*"
                   protocol: "Tcp"
@@ -62,7 +62,7 @@
                   sourcePortRange: "*"
                   destinationAddressPrefix: "*"
               - name: "network-acl-outbound"
-                properties: {
+                properties: 
                   priority: "1000"
                   sourceAddressPrefix": "*"
                   protocol: "Tcp"
