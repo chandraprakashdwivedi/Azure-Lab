@@ -24,15 +24,15 @@
           name: "{{ nicName }}"
           location: "{{ location }}"
           dependsOn:
-            - "[concat('Microsoft.Network/publicIPAddresses/', "{{ publicIPAddressName }}"]"
-            - "[concat('Microsoft.Network/virtualNetworks/', "{{ virtualNetworkName }}"]"
+            - "[concat('Microsoft.Network/publicIPAddresses/', '{{ publicIPAddressName }}']"
+            - "[concat('Microsoft.Network/virtualNetworks/', '{{ virtualNetworkName }}']"
           properties:
             ipConfigurations:
               - name: "ipconfig1"
                 properties:
                   privateIPAllocationMethod: "Dynamic"
                   publicIPAddress:
-                    id: "[resourceId('Microsoft.Network/publicIPAddresses',"{{ publicIPAddressName }}"]"
+                    id: "[resourceId('Microsoft.Network/publicIPAddresses','{{ publicIPAddressName }}']"
                   subnet:
                     id: "{{ subnetRef }}"
  
