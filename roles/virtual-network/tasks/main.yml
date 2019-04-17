@@ -19,6 +19,14 @@
               - name: "{{ subnetName }}"
                 properties:
                   addressPrefix: "{{ subnetPrefix }}"
+        - type: "Microsoft.Network/publicIPAddresses"
+          apiVersion: "2015-05-01-preview"
+          name: "{{ publicIPAddressName }}"
+          location: "{{ location }}"
+          properties:
+            publicIPAllocationMethod: "{{ publicIPAddressType }}"
+            dnsSettings:
+              domainNameLabel: "{{ dnsNameForPublicIP }}"
         - type: "Microsoft.Network/networkInterfaces"
           apiVersion: "2015-05-01-preview"
           name: "{{ nicName }}"
