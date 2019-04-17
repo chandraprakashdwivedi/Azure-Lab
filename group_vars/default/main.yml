@@ -1,2 +1,3 @@
-resource_group: westUSresources
+resource_group: myresources
 region: Central India
+newStorageAccountName: india-storage170419
