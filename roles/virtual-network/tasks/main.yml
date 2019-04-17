@@ -42,7 +42,7 @@
                   publicIPAddress:
                     id: "[resourceId('Microsoft.Network/publicIPAddresses','{{ publicIPAddressName }}' )]"
                   subnet:
-                    id: "{{ subnetRef }}"
+                    id: "[concat (resourceId('Microsoft.Network/virtualNetworks','{{ virtualNetworkName }}' ),'/subnets/','{{ subnetName }}' )]"
  
   
               
