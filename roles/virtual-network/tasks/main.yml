@@ -53,7 +53,7 @@
             securityRules: 
               - name: "network-acl-inbound"
                 properties: {
-                  priority: 1000,
+                  priority: "1000"
                   sourceAddressPrefix: "*"
                   protocol: "Tcp"
                   destinationPortRange: "*"
@@ -63,9 +63,9 @@
                   destinationAddressPrefix: "*"
               - name: "network-acl-outbound"
                 properties: {
-                  priority: 1000,
+                  priority: "1000"
                   sourceAddressPrefix": "*"
-                  protocol: "Tcp",
+                  protocol: "Tcp"
                   destinationPortRange: "*"
                   access: "Allow"
                   direction: "Outbound"
