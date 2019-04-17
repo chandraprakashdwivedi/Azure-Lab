@@ -64,7 +64,7 @@
               - name: "network-acl-outbound"
                 properties: 
                   priority: "1000"
-                  sourceAddressPrefix": "*"
+                  sourceAddressPrefix: "*"
                   protocol: "Tcp"
                   destinationPortRange: "*"
                   access: "Allow"
