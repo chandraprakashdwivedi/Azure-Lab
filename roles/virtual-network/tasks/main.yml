@@ -54,7 +54,7 @@
               - name: "network-acl-inbound"
                 properties: {
                   priority: 1000,
-                  sourceAddressPrefix": "*"
+                  sourceAddressPrefix: "*"
                   protocol: "Tcp"
                   destinationPortRange: "*"
                   access: "Allow"
