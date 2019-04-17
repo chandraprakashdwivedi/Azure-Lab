@@ -49,10 +49,9 @@
           apiVersion: "2016-09-01"
           location: "[parameters('location')]"
           comments: "Network Security Group (NSG) for your Primary NIC"
-          properties: {
-            securityRules: [
-              {
-                name: "network-acl-inbound"
+          properties: 
+            securityRules: 
+              - name: "network-acl-inbound"
                 properties: {
                   priority: 1000,
                   sourceAddressPrefix": "*"
@@ -62,9 +61,7 @@
                   direction: "Inbound"
                   sourcePortRange: "*"
                   destinationAddressPrefix: "*"
-                }
-                {
-                name: "network-acl-outbound"
+              - name: "network-acl-outbound"
                 properties: {
                   priority: 1000,
                   sourceAddressPrefix": "*"
@@ -74,14 +71,8 @@
                   direction: "Outbound"
                   sourcePortRange: "*"
                   destinationAddressPrefix: "*"
-                }
-              }
-            ]
-          }
-        }
-      ]
-  outputs: {}
- 
+                             
+
   
               
              
