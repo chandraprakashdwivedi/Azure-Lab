@@ -2,7 +2,7 @@
   azure_rm_deployment:
     state: present
     resource_group_name: "{{ myresources }}"
-    location: "{{ location }}"
+    location: West US
     template:
       $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"
       contentVersion: "1.0.0.0"
@@ -19,6 +19,22 @@
               - name: "{{ subnetName }}"
                 properties:
                   addressPrefix: "{{ subnetPrefix }}"
+        - type: "Microsoft.Network/networkInterfaces"
+          apiVersion: "2015-05-01-preview"
+          name: "{{ nicName }}"
+          location: "{{ location }}"
+          dependsOn:
+            - "[concat('Microsoft.Network/publicIPAddresses/', {{ publicIPAddressName }}"
+            - "[concat('Microsoft.Network/virtualNetworks/', {{ virtualNetworkName }}"
+          properties:
+            ipConfigurations:
+              - name: "ipconfig1"
+                properties:
+                  privateIPAllocationMethod: "Dynamic"
+                  publicIPAddress:
+                    id: "[resourceId('Microsoft.Network/publicIPAddresses',{{ publicIPAddressName }}"
+                  subnet:
+                    id: "{{ subnetRef }}"
  
   
               
