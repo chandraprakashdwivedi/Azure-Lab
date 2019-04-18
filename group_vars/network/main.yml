@@ -1,5 +1,5 @@
 myresources: "myresources"
-deploymentname: "mydeployment"
+#deploymentname: "mydeployment"
 location: "Central India"
 imagePublisher: "Canonical"
 imageOffer: "UbuntuServer"
