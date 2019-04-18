@@ -62,7 +62,7 @@ pipeline {
             from: "${mailNotifier}",
             replyTo: 'donotreply@gmail.com',
             subject: "${appname} ${JOB_NAME}",
-            to: 'dwivedichandra@gmail.com')
+            to: 'chandra.prakash336@gmail.com')
 
    }
  }
