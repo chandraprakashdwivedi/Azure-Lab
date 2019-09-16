@@ -1,10 +1,12 @@
 ---
 - hosts: localhost
   connection: local
+  ignore_errors: yes
+  
   tasks:
     - name: Create resource group
       azure_rm_resourcegroup:
-        name: cpresourcegroup
+        name: cp2resourcegroup
         location: centralus
       register: rg 
  
