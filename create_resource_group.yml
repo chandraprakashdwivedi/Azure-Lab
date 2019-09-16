@@ -4,7 +4,7 @@
   tasks:
     - name: Create resource group
       azure_rm_resourcegroup:
-        name: devopsresourcegroup
+        name: cpresourcegroup
         location: centralus
       register: rg 
  
