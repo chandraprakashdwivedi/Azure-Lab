@@ -1,5 +1,4 @@
-#resource_group: "myresources"
-deploymentname: "myDeployment2"
+deploymentname: "myNetworkDeployment"
 #region: "Central India"
-newStorageAccountName: "india-storage170419"
+newStorageAccountName: "india-storage160919"
 storageAccountType: "Standard_LRS"
